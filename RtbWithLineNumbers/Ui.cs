@@ -1,5 +1,10 @@
-﻿namespace WASP_huninat.WinForms.CustomControls.RtbWithLineNumbers
+﻿ using System.ComponentModel;
+
+namespace WASP_huninat.WinForms.CustomControls.RtbWithLineNumbers
 {
+    [ToolboxItem(true)]
+    [ToolboxItemFilter("Custom Controls")]
+    [Description("A custom button control.")]
     public partial class UI : UserControl
     {
         public Logic Logic = new Logic();
