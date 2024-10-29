@@ -51,6 +51,7 @@
             // 
             // TxtTbl
             // 
+            TxtTbl.BackColor = Color.Silver;
             TxtTbl.Dock = DockStyle.Top;
             TxtTbl.FixedPanel = FixedPanel.Panel1;
             TxtTbl.IsSplitterFixed = true;
@@ -103,7 +104,7 @@
             Controls.Add(ScrollPnl);
             Name = "UI";
             Size = new Size(500, 150);
-            SizeChanged += UI_SizeChanged;
+            Load += UI_Load;
             ScrollPnl.ResumeLayout(false);
             TxtTbl.Panel1.ResumeLayout(false);
             TxtTbl.Panel2.ResumeLayout(false);

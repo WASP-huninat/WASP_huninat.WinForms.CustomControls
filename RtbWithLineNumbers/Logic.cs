@@ -10,27 +10,27 @@
 
         public int ScrollToCurrentLine()
         {
-            int currentLineCount = TextRtb.Lines.Length;
-            int fontHeight = TextRtb.Font.Height;
-            
-            TablePnl.Height = ScrollPnl.Height + (fontHeight * currentLineCount);
+                int currentLineCount = TextRtb.Lines.Length;
+                int fontHeight = TextRtb.Font.Height;
 
-            int currentLine = TextRtb.GetFirstCharIndexOfCurrentLine();
-            currentLine = TextRtb.GetLineFromCharIndex(currentLine);
-            currentLine *= fontHeight;
+                TablePnl.Height = ScrollPnl.Height + (fontHeight * currentLineCount);
 
-            LineRtb.Text = "0";
-            for (int i = 1; i < currentLineCount; i++)
-            {
-                LineRtb.AppendText(Environment.NewLine + i.ToString());
-            }
+                int currentLine = TextRtb.GetFirstCharIndexOfCurrentLine();
+                currentLine = TextRtb.GetLineFromCharIndex(currentLine);
+                currentLine *= fontHeight;
 
-            if (currentLine > ScrollPnl.VerticalScroll.Maximum)
-            {
-                return 0;
-            }
+                LineRtb.Text = "0";
+                for (int i = 1; i < currentLineCount; i++)
+                {
+                    LineRtb.AppendText(Environment.NewLine + i.ToString());
+                }
 
-            return currentLine;
+                if (currentLine > ScrollPnl.VerticalScroll.Maximum)
+                {
+                    return 0;
+                }
+
+                return currentLine;
         }
 
         public int ChangeLineOnKeyPress(KeyEventArgs e)

@@ -15,7 +15,6 @@ namespace WASP_huninat.WinForms.CustomControls.RtbWithLineNumbers
             set
             {
                 base.BackColor = value;
-                ScrollPnl.BackColor = Parent.BackColor;
                 LineRtb.BackColor = value;
                 TextRtb.BackColor = value;
             }
@@ -29,6 +28,15 @@ namespace WASP_huninat.WinForms.CustomControls.RtbWithLineNumbers
                 base.ForeColor = value;
                 LineRtb.ForeColor = value;
                 TextRtb.ForeColor = value;
+            }
+        }
+
+        public new Color SplitColor
+        {
+            get { return TxtTbl.BackColor; }
+            set
+            {
+                TxtTbl.BackColor = value;
             }
         }
 
@@ -47,14 +55,6 @@ namespace WASP_huninat.WinForms.CustomControls.RtbWithLineNumbers
         public UI()
         {
             InitializeComponent();
-
-            Logic.LineRtb = LineRtb;
-            Logic.TextRtb = TextRtb;
-            Logic.TablePnl = TxtTbl;
-            Logic.ScrollPnl = ScrollPnl;
-
-            TxtTbl.Height = this.Height;
-            ScrollPnl.Height = this.Height;
         }
 
         private void TextRtb_KeyDown(object sender, KeyEventArgs e)
@@ -82,6 +82,19 @@ namespace WASP_huninat.WinForms.CustomControls.RtbWithLineNumbers
             TxtTbl.Height = ScrollPnl.Height;
             ScrollPnl.VerticalScroll.Value = Logic.ScrollToCurrentLine();
             ScrollPnl.PerformLayout();
+        }
+
+        private void UI_Load(object sender, EventArgs e)
+        {
+            Logic.LineRtb = LineRtb;
+            Logic.TextRtb = TextRtb;
+            Logic.TablePnl = TxtTbl;
+            Logic.ScrollPnl = ScrollPnl;
+
+            TxtTbl.Height = this.Height;
+            ScrollPnl.Height = this.Height;
+
+            this.SizeChanged += UI_SizeChanged;
         }
     }
 }
