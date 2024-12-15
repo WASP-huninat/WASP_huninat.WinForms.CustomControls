@@ -1,4 +1,4 @@
-﻿namespace WASP_huninat.WinForms.CustomControls
+﻿namespace WASP_huninat.WinForms.CustomControls.Test
 {
     partial class RTBWithLineNumbers
     {
@@ -41,7 +41,10 @@
             // 
             // splitContainer1
             // 
+            splitContainer1.BackColor = SystemColors.ControlDark;
             splitContainer1.Dock = DockStyle.Top;
+            splitContainer1.FixedPanel = FixedPanel.Panel1;
+            splitContainer1.IsSplitterFixed = true;
             splitContainer1.Location = new Point(0, 0);
             splitContainer1.Name = "splitContainer1";
             // 
@@ -52,50 +55,59 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(Code);
-            splitContainer1.Size = new Size(723, 221);
-            splitContainer1.SplitterDistance = 239;
+            splitContainer1.Size = new Size(500, 100);
             splitContainer1.TabIndex = 0;
+            splitContainer1.TabStop = false;
             // 
             // Line
             // 
+            Line.BackColor = SystemColors.Control;
+            Line.BorderStyle = BorderStyle.None;
             Line.Dock = DockStyle.Fill;
             Line.Location = new Point(0, 0);
             Line.Name = "Line";
+            Line.ReadOnly = true;
             Line.ScrollBars = RichTextBoxScrollBars.None;
-            Line.Size = new Size(239, 221);
+            Line.Size = new Size(50, 100);
             Line.TabIndex = 0;
-            Line.Text = "";
+            Line.Text = "0";
             // 
             // Code
             // 
+            Code.BackColor = SystemColors.Control;
+            Code.BorderStyle = BorderStyle.None;
             Code.Dock = DockStyle.Fill;
             Code.Location = new Point(0, 0);
             Code.Name = "Code";
-            Code.ScrollBars = RichTextBoxScrollBars.ForcedHorizontal;
-            Code.Size = new Size(480, 221);
+            Code.ScrollBars = RichTextBoxScrollBars.None;
+            Code.Size = new Size(446, 100);
             Code.TabIndex = 0;
             Code.Text = "";
             Code.WordWrap = false;
             Code.KeyDown += Code_KeyDown;
+            Code.KeyUp += Code_KeyUp;
             // 
             // panel1
             // 
             panel1.AutoScroll = true;
+            panel1.BackColor = SystemColors.Control;
             panel1.Controls.Add(splitContainer1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(723, 257);
+            panel1.Size = new Size(500, 120);
             panel1.TabIndex = 2;
             // 
             // RTBWithLineNumbers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             Controls.Add(panel1);
             Name = "RTBWithLineNumbers";
-            Size = new Size(723, 289);
+            Size = new Size(500, 150);
             Load += RTBWithLineNumbers_Load;
+            SizeChanged += RTBWithLineNumbers_SizeChanged;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();

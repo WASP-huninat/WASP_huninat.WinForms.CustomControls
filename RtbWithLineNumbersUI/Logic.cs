@@ -1,4 +1,4 @@
-﻿namespace WASP_huninat.WinForms.CustomControls.RtbWithLineNumbers
+﻿namespace WASP_huninat.WinForms.CustomControls.RtbWithLineNumbersUI
 {
     public class Logic
     {
@@ -10,27 +10,27 @@
 
         public int ScrollToCurrentLine()
         {
-                int currentLineCount = TextRtb.Lines.Length;
-                int fontHeight = TextRtb.Font.Height;
+            int currentLineCount = TextRtb.Lines.Length;
+            int fontHeight = TextRtb.Font.Height;
 
-                TablePnl.Height = ScrollPnl.Height + (fontHeight * currentLineCount);
+            TablePnl.Height = ScrollPnl.Height + fontHeight * currentLineCount;
 
-                int currentLine = TextRtb.GetFirstCharIndexOfCurrentLine();
-                currentLine = TextRtb.GetLineFromCharIndex(currentLine);
-                currentLine *= fontHeight;
+            int currentLine = TextRtb.GetFirstCharIndexOfCurrentLine();
+            currentLine = TextRtb.GetLineFromCharIndex(currentLine);
+            currentLine *= fontHeight;
 
-                LineRtb.Text = "0";
-                for (int i = 1; i < currentLineCount; i++)
-                {
-                    LineRtb.AppendText(Environment.NewLine + i.ToString());
-                }
+            LineRtb.Text = "0";
+            for (int i = 1; i < currentLineCount; i++)
+            {
+                LineRtb.AppendText(Environment.NewLine + i.ToString());
+            }
 
-                if (currentLine > ScrollPnl.VerticalScroll.Maximum)
-                {
-                    return 0;
-                }
+            if (currentLine > ScrollPnl.VerticalScroll.Maximum)
+            {
+                return 0;
+            }
 
-                return currentLine;
+            return currentLine;
         }
 
         public int ChangeLineOnKeyPress(KeyEventArgs e)

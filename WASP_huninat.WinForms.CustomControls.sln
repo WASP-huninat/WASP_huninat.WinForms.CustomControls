@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WASP_huninat.WinForms.CustomControls", "WASP_huninat.WinForms.CustomControls.csproj", "{6670B18B-1C3A-456C-BC7C-EF54FC5933B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUI", "..\TestUI\TestUI.csproj", "{89FB841F-C5F2-43F5-ACC8-35ADB390C3C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6670B18B-1C3A-456C-BC7C-EF54FC5933B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6670B18B-1C3A-456C-BC7C-EF54FC5933B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6670B18B-1C3A-456C-BC7C-EF54FC5933B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89FB841F-C5F2-43F5-ACC8-35ADB390C3C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89FB841F-C5F2-43F5-ACC8-35ADB390C3C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89FB841F-C5F2-43F5-ACC8-35ADB390C3C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89FB841F-C5F2-43F5-ACC8-35ADB390C3C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

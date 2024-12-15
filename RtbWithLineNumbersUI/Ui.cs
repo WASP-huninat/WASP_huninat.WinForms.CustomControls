@@ -1,4 +1,5 @@
-﻿ using System.ComponentModel;
+﻿using System.ComponentModel;
+using WASP_huninat.WinForms.CustomControls.RtbWithLineNumbersUI;
 
 namespace WASP_huninat.WinForms.CustomControls.RtbWithLineNumbers
 {
