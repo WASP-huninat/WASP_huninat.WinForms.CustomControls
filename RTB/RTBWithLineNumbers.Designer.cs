@@ -41,7 +41,7 @@
             // 
             // splitContainer1
             // 
-            splitContainer1.BackColor = SystemColors.ControlDark;
+            splitContainer1.BackColor = SystemColors.ControlDarkDark;
             splitContainer1.Dock = DockStyle.Top;
             splitContainer1.FixedPanel = FixedPanel.Panel1;
             splitContainer1.IsSplitterFixed = true;

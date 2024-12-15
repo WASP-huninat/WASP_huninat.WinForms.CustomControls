@@ -33,7 +33,7 @@ namespace WASP_huninat.WinForms.CustomControls.Test
 
         public Color SplitColor
         {
-            get { return Code.BackColor; }
+            get { return splitContainer1.BackColor; }
             set
             {
                 splitContainer1.BackColor = value;
