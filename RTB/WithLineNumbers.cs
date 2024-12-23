@@ -92,7 +92,7 @@ namespace WASP_huninat.WinForms.CustomControls.RTB
             UpdateLineNumbers();
         }
 
-        private void UpdateLineNumbers()
+        private void UpdateLineNumbers(
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("0");
