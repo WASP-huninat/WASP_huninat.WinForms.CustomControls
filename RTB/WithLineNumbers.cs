@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel;
 using System.Text;
 
-namespace WASP_huninat.WinForms.CustomControls.Test
+namespace WASP_huninat.WinForms.CustomControls.RTB
 {
     [ToolboxItem(true)]
     [ToolboxItemFilter("Custom Controls")]
     [Description("A custom RTB with LineNumbers")]
-    public partial class RTBWithLineNumbers : UserControl
+    public partial class WithLineNumbers : UserControl
     {
         #region UI Properties
         public new Color BackColor
@@ -53,12 +53,12 @@ namespace WASP_huninat.WinForms.CustomControls.Test
             {
                 base.Font = value;
                 Line.Font = value;
-                Code.Font = value;
+                Code.Font = value;                    
             }
         }
         #endregion
 
-        public RTBWithLineNumbers()
+        public WithLineNumbers()
         {
             InitializeComponent();
         }
@@ -92,7 +92,7 @@ namespace WASP_huninat.WinForms.CustomControls.Test
             UpdateLineNumbers();
         }
 
-        private void UpdateLineNumbers()
+        private void UpdateLineNumbers(
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("0");
@@ -125,6 +125,11 @@ namespace WASP_huninat.WinForms.CustomControls.Test
         }
 
         private void Code_KeyUp(object sender, KeyEventArgs e)
+        {
+            UpdateLineNumbers();
+        }
+
+        private void Code_TextChanged(object sender, EventArgs e)
         {
             UpdateLineNumbers();
         }

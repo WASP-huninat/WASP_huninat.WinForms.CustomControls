@@ -1,6 +1,6 @@
-﻿namespace WASP_huninat.WinForms.CustomControls.Test
+﻿namespace WASP_huninat.WinForms.CustomControls.RTB
 {
-    partial class RTBWithLineNumbers
+    partial class WithLineNumbers
     {
         /// <summary> 
         /// Required designer variable.
@@ -84,6 +84,7 @@
             Code.TabIndex = 0;
             Code.Text = "";
             Code.WordWrap = false;
+            Code.TextChanged += Code_TextChanged;
             Code.KeyDown += Code_KeyDown;
             Code.KeyUp += Code_KeyUp;
             // 
@@ -98,13 +99,13 @@
             panel1.Size = new Size(500, 120);
             panel1.TabIndex = 2;
             // 
-            // RTBWithLineNumbers
+            // WithLineNumbers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             Controls.Add(panel1);
-            Name = "RTBWithLineNumbers";
+            Name = "WithLineNumbers";
             Size = new Size(500, 150);
             Load += RTBWithLineNumbers_Load;
             SizeChanged += RTBWithLineNumbers_SizeChanged;

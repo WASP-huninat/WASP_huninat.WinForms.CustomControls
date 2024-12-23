@@ -2,6 +2,7 @@
 {
     public class Logic
     {
+#pragma warning disable CS8618 // Dereference of a possibly null reference.
         public RichTextBox LineRtb { get; set; }
         public RichTextBox TextRtb { get; set; }
         public SplitContainer TablePnl { get; set; }
