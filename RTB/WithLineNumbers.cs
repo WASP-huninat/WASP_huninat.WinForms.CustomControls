@@ -131,7 +131,7 @@ namespace WASP_huninat.WinForms.CustomControls.RTB
 
         private void Code_TextChanged(object sender, EventArgs e)
         {
-            UpdateLineNumbers();
+            ScrollToCurrentLine(Keys.A);
         }
     }
 }
